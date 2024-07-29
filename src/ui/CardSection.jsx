@@ -1,7 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
-
 import styled from "styled-components";
 
 const StyledCard = styled(SplideSlide)`
@@ -30,55 +29,55 @@ const StyledCard = styled(SplideSlide)`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap:6rem;
+    gap: 6rem;
   }
 `;
 
 const cryptoData = [
   {
-    logo: "/src/assets/bitcoinOrange.png",
+    logo: "/assets/bitcoinOrange.png",
     title: "Bitcoin",
     subtitle: "BTC",
     price: "$19,163.30",
     change: "+0.55%",
     volume: "$155.3M",
-    graph: "/src/assets/cardgraph.png",
+    graph: "/assets/cardgraph.png",
   },
   {
-    logo: "/src/assets/ethereumPurple.png",
+    logo: "/assets/ethereumPurple.png",
     title: "Ethereum",
     subtitle: "ETH",
     price: "$1,300.05",
     change: "+1.03%",
     volume: "$239.5M",
-    graph: "/src/assets/cardgraph.png",
+    graph: "/assets/cardgraph.png",
   },
   {
-    logo: "/src/assets/CardanoBlue.png",
+    logo: "/assets/CardanoBlue.png",
     title: "Cardano",
     subtitle: "ADA",
     price: "$0.35",
     change: "+2.15%",
     volume: "$3.4M",
-    graph: "/src/assets/cardgraph.png",
+    graph: "/assets/cardgraph.png",
   },
   {
-    logo: "/src/assets/bitcoinGreen.png",
+    logo: "/assets/bitcoinGreen.png",
     title: "Bitcoin Cash",
     subtitle: "BCH",
     price: "$106.50",
     change: "+0.45%",
     volume: "$0.6M",
-    graph: "/src/assets/cardgraph.png",
+    graph: "/assets/cardgraph.png",
   },
   {
-    logo: "/src/assets/dogecoinGold.png",
+    logo: "/assets/dogecoinGold.png",
     title: "Dogecoin",
     subtitle: "DOGE",
     price: "$0.06",
     change: "+0.75%",
     volume: "$0.9M",
-    graph: "/src/assets/cardgraph.png",
+    graph: "/assets/cardgraph.png",
   },
 ];
 
@@ -107,7 +106,7 @@ function CardSection() {
       aria-label="My Favorite Images"
     >
       {cryptoData.map((crypto, index) => (
-        <StyledCard className="card" style={{width: "max-content"}}>
+        <StyledCard className="card" style={{ width: "max-content" }}>
           <div className="first-section">
             <div className="header-content">
               <div>

@@ -6,7 +6,7 @@ const CryptoTable = () => {
   const [cryptoData, setCryptoData] = useState([]);
 
   useEffect(() => {
-    fetch("/src/data/database.json")
+    fetch("/data/database.json")
       .then((response) => response.json())
       .then((data) => setCryptoData(data));
   }, []);

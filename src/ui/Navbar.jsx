@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.png";
+import logo from "../../public/assets/logo.png";
 import DropDown from "./DropDown";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Search from "./Search";

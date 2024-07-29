@@ -1,12 +1,12 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
-import image1 from "../assets/image-1.png";
-import image2 from "../assets/image-2.png";
-import image3 from "../assets/image-3.png";
-import image4 from "../assets/image-4.png";
-import image5 from "../assets/image-5.png";
-import image6 from "../assets/image-6.png";
+import image1 from "../../public/assets/image-1.png";
+import image2 from "../../public/assets/image-2.png";
+import image3 from "../../public/assets/image-3.png";
+import image4 from "../../public/assets/image-4.png";
+import image5 from "../../public/assets/image-5.png";
+import image6 from "../../public/assets/image-6.png";
 
 const slides = [
   {
