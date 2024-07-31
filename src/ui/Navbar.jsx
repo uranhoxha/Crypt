@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logo from "../../public/assets/logo.png";
+import logo from "/assets/logo.svg";
 import DropDown from "./DropDown";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Search from "./Search";
@@ -140,7 +140,7 @@ function Navbar() {
   return (
     <StyledNavbarContainer>
       <div className="logo-navbar">
-        <img src={logo} alt="logo_crypt" />
+        <a href="home"><img src={logo} alt="logo_crypt" /></a>
         <StyledNavbar>
           <StyledList>
             <DropDown

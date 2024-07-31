@@ -3,8 +3,9 @@ import Navbar from "../ui/Navbar";
 import CompleteImageSlider from "./CompleteImageSlider";
 import TableTitle from "./TableTitle";
 import TabsCategories from "./TabsCategories";
-import Table from "./Table";
+
 import CardSection from "./CardSection";
+import InfoSection from "./InfoSection";
 
 function AppLayout() {
   return (
@@ -14,8 +15,8 @@ function AppLayout() {
       <CompleteImageSlider/>
       <TableTitle/>
       <TabsCategories/>
-      <Table/>
       <CardSection/>
+      <InfoSection/>
     </div>
   );
 }

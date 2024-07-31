@@ -31,6 +31,7 @@ const StyledNumbers = styled.div`
     align-items:center;
     justify-content:center;
     gap:10px;
+    flex-wrap: wrap;
     div{
         padding:5px 12px;
         border-radius: 10px;

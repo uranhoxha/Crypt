@@ -3,7 +3,7 @@ import "@splidejs/react-splide/css";
 
 import styled from "styled-components";
 
-const StyledCard = styled(SplideSlide)`
+const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 50px;
@@ -11,6 +11,7 @@ const StyledCard = styled(SplideSlide)`
   border: 1px solid #efefef;
   border-radius: 15px;
   gap: 30px;
+
 
   .first-section {
     display: flex;
@@ -41,7 +42,7 @@ const cryptoData = [
     price: "$19,163.30",
     change: "+0.55%",
     volume: "$155.3M",
-    graph: "/assets/cardgraph.png",
+    graph: "/assets/cardGraph.png",
   },
   {
     logo: "/assets/ethereumPurple.png",
@@ -50,16 +51,16 @@ const cryptoData = [
     price: "$1,300.05",
     change: "+1.03%",
     volume: "$239.5M",
-    graph: "/assets/cardgraph.png",
+    graph: "/assets/cardGraph.png",
   },
   {
-    logo: "/assets/CardanoBlue.png",
+    logo: "/assets/cardanoBlue.png",
     title: "Cardano",
     subtitle: "ADA",
     price: "$0.35",
     change: "+2.15%",
     volume: "$3.4M",
-    graph: "/assets/cardgraph.png",
+    graph: "/assets/cardGraph.png",
   },
   {
     logo: "/assets/bitcoinGreen.png",
@@ -68,7 +69,7 @@ const cryptoData = [
     price: "$106.50",
     change: "+0.45%",
     volume: "$0.6M",
-    graph: "/assets/cardgraph.png",
+    graph: "/assets/cardGraph.png",
   },
   {
     logo: "/assets/dogecoinGold.png",
@@ -77,7 +78,7 @@ const cryptoData = [
     price: "$0.06",
     change: "+0.75%",
     volume: "$0.9M",
-    graph: "/assets/cardgraph.png",
+    graph: "/assets/cardGraph.png",
   },
 ];
 
@@ -88,6 +89,7 @@ function CardSection() {
         rewind: true,
         gap: "40px",
         perPage: 6,
+        autoWidth: true,
         breakpoints: {
           1795: {
             perPage: 4,
@@ -106,34 +108,36 @@ function CardSection() {
       aria-label="My Favorite Images"
     >
       {cryptoData.map((crypto, index) => (
-        <StyledCard className="card" style={{ width: "max-content" }}>
-          <div className="first-section">
-            <div className="header-content">
-              <div>
-                <img src={crypto.logo} alt="Bitcoin orange" />
+        <SplideSlide>
+          <StyledCard>
+            <div className="first-section">
+              <div className="header-content">
+                <div>
+                  <img src={crypto.logo} alt="Bitcoin orange" />
+                </div>
+                <div>
+                  <h4>{crypto.title}</h4>
+                  <p>{crypto.subtitle}</p>
+                </div>
               </div>
+              <h3>{crypto.price}</h3>
+            </div>
+            <div className="second-section">
+              <img src={crypto.graph} alt="Graph" />
               <div>
-                <h4>{crypto.title}</h4>
-                <p>{crypto.subtitle}</p>
+                <div>
+                  CHG <span style={{ color: "#17E6A1" }}>{crypto.change}</span>
+                </div>
+                <div>
+                  VOL{" "}
+                  <span style={{ color: "#111112", fontWeight: "900" }}>
+                    {crypto.volume}
+                  </span>
+                </div>
               </div>
             </div>
-            <h3>{crypto.price}</h3>
-          </div>
-          <div className="second-section">
-            <img src={crypto.graph} alt="Graph" />
-            <div>
-              <div>
-                CHG <span style={{ color: "#17E6A1" }}>{crypto.change}</span>
-              </div>
-              <div>
-                VOL{" "}
-                <span style={{ color: "#111112", fontWeight: "900" }}>
-                  {crypto.volume}
-                </span>
-              </div>
-            </div>
-          </div>
-        </StyledCard>
+          </StyledCard>
+        </SplideSlide>
       ))}
     </Splide>
   );

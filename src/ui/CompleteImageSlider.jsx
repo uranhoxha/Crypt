@@ -8,12 +8,9 @@ const StyledImageSliderContainer = styled.div`
         color: #fff;
     }
 
-    
-
     height: 100%;
     background: linear-gradient(0deg, #Fff 50%, #1A232C 50%);
     padding-top:30px;
-    width:100%;
     padding-left:12px;
 `
 
